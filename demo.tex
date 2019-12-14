@@ -1,0 +1,77 @@
+
+%%==================================================
+%% demo.tex for TJAU Thesis
+%% modified by wangyuan
+%% version: 0.1
+%% last update: Dec. 13th, 2019
+%%==================================================
+
+\documentclass[oneside, master]{TJAU-thesis-grd}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 封面
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{多功能开关波束天线阵列研究}
+\etitle{test}        %论文标题
+\author{王渊}         %作者
+\advisor{王仰仁 \hspace{0.2in} 教授} %导师
+\school{水利工程学院}    %学院名
+\major{2016级水文与水资源工程专业2班}  %专业班级
+\xibie{水文与水资源工程系} %系别
+\chengji{100} %成绩
+%\studentnumber{**********}
+
+
+% 封面绘制
+\makecover
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 前置部分
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frontmatter
+
+% 加入目录
+\tableofcontents
+%%加入图、表索引(同时取消图表索引中章之间的垂直间隔)
+%\let\origaddvspace\addvspace
+%\renewcommand{\addvspace}[1]{}
+%\listoffigures
+%\listoftables
+%\renewcommand{\addvspace}[1]{\origaddvspace{#1}}
+% 摘要
+\include{chapters/abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 正主体部分
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mainmatter
+
+%% 各章正文内容
+\include{chapters/chapter1}
+%\include{chapters/chapter2}
+%\include{chapters/chapter3}
+
+%\include{chapters/conclusion}
+
+%% 参考文献，五号字，使用 BibTeX，包含参考文献文件.bib
+\CTEXsetup[format={\heiti\zihao{4}\centering}]{chapter}
+
+\bibliography{reference/reference}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 后置部分
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%(其后部分无编号)
+\backmatter
+% 致谢
+\include{chapters/thanks}
+%% 附录
+\appendix
+\renewcommand\thesection{附录\arabic{section}} 
+\include{chapters/app1} 
+%\include{chapters/app2} 
+
+\end{document}
